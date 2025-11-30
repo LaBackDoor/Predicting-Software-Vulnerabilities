@@ -1,12 +1,37 @@
 # Predicting Software Vulnerability Trends with Multi-Recurrent Neural Networks
 
-This repository contains the dataset and implementation for the paper **"Predicting Software Vulnerability Trends with Multi-Recurrent Neural Networks: A Time Series Forecasting Approach"**, published in the Proceedings of the 1st International Conference on NLP & AI for Cyber Security (NLPAICS 2024).
+This repository contains the datasets for the paper **"Predicting Software Vulnerability Trends with Multi-Recurrent Neural Networks: A Time Series Forecasting Approach"**, published in the *Proceedings of the 1st International Conference on NLP & AI for Cyber Security* (NLPAICS 2024).
 
 ## 📄 Abstract
 
 Predicting software vulnerabilities effectively is crucial for enhancing cybersecurity measures in an increasingly digital world. Traditional forecasting models often struggle with the complexity and dynamics of software vulnerability data, necessitating more advanced methodologies. 
 
 This paper introduces a novel approach using **Multi-Recurrent Neural Networks (MRN)**, which integrates multiple memory mechanisms and offers a balanced complexity suitable for time-series data. We compare MRNs against traditional models like ARIMA, Feedforward Multilayer Perceptrons (FFMLP), Simple Recurrent Networks (SRN), and Long Short-Term Memory (LSTM) networks. Our results demonstrate that MRNs consistently outperform these models, especially in settings with limited data or shorter forecasting horizons.
+
+## 📂 Repository Structure
+The `data` folder contains the time-series datasets used for the experiments in the paper, as well as additional cybersecurity attack datasets.
+
+```text
+Predicting-Software-Vulnerabilities/
+└── data/
+    ├── Google_Chrome_Soft_Vuln_2007_2024.csv        # Primary Dataset (Paper)
+    ├── MacOS_Soft_Vuln_1998_2024.csv                # Primary Dataset (Paper)
+    ├── 2020_2021_Hackmageddon_Daily_Attack_Dataset.csv
+    ├── African Countries Attack Dataset.csv
+    └── Attack Intensity Scraped.csv
+```
+
+## Dataset Descriptions
+Primary Datasets (Used in Paper)
+These datasets were used to evaluate the MRN model against benchmarks (ARIMA, LSTM, etc.).
+Google Chrome (2007-2024): Contains 3,398 data points representing monthly vulnerability counts.
+MacOS (1998-2024): Contains 2,626 data points representing monthly vulnerability counts.
+
+Additional Datasets
+Extra datasets included for broader cybersecurity trend analysis:
+Hackmageddon Daily Attack Dataset (2020-2021): Daily logs of cyber attacks.
+African Countries Attack Dataset: Regional specific attack data.
+Attack Intensity Scraped: Data focusing on the intensity/volume of attacks over time.
 
 ## 🔗 Link to Paper
 [Read the full paper on ACL Anthology](https://aclanthology.org/2024.nlpaics-1.5.pdf)
